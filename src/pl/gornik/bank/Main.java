@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        BankAccount bankAccount = new BankAccount("12345678901234567890123456",5000);
+        BankAccount bankAccount = new BankAccount("123456789012345678a0123456",5000);
         System.out.println(bankAccount);
 
         System.out.println("Twoj numer konta :\n"+bankAccount.getAccountNumber());

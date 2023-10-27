@@ -7,14 +7,16 @@ public class BankAccount {
     private double accountBalance;
 
     public BankAccount(String accountNumber, double accountBalance) {
-        if (accountNumber.length() == 26) this.accountNumber = accountNumber;
-        else if (accountNumber.length() < 26) {
+        if (accountNumber.length() == 26 && accountNumber.matches("[0-9]*")) this.accountNumber = accountNumber;
+        else if (accountNumber.length() < 26 && accountNumber.matches("[0-9]*")) {
             int size = accountNumber.length();
             for (int i=0;i<26-size;i++) {
                 accountNumber += "0";
             }
+
             this.accountNumber = accountNumber;
         }
+        else System.out.println("numer konta nie poprawny");
         if (accountBalance > 0) this.accountBalance = accountBalance;
     }
 
